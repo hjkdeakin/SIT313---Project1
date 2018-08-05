@@ -1,23 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
     <TextView
-        android:text="Calendar"
+        android:text="                Calendar"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:id="@+id/textView1"
         android:textAlignment="center" />
+    <Button
+        android:text="note"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginLeft="310dp"
+        android:id="@+id/noteButton" />
     <CalendarView
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:id="@+id/calendarView" />
+        android:layout_marginTop="30dp"
+        android:id="@+id/calendarView"
+        android:minWidth="25px"
+        android:minHeight="25px" />
     <TextView
         android:text="Calendar Display"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="330dp"
         android:id="@+id/txtDisplay" />
-</LinearLayout>
+    <TextView
+        android:id="@+id/txtNote"
+        android:text="event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="360dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:id="@+id/playButton"
+        android:text="play" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="150dp"
+        android:id="@+id/pauseButton"
+        android:text="pause"
+        android:layout_marginRight="0.0dp"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="300dp"
+        android:id="@+id/stopButton"
+        android:text="stop" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="470dp"
+        android:layout_marginLeft="80dp"
+        android:id="@+id/evaluateButton"
+        android:text="evaluate" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="470dp"
+        android:layout_marginLeft="220dp"
+        android:id="@+id/webButton"
+        android:text="web" />
+</RelativeLayout>
