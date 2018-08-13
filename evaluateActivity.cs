@@ -21,7 +21,18 @@ namespace AndroidCalendar
             base.OnCreate(savedInstanceState);
 
             // Create your application here
-            SetContentView(Resource.Layout.evaluateActivity);
+            SetContentView(Resource.Layout.evaluate);
+
+            var ratingBar = FindViewById<RatingBar>(Resource.Id.ratingBar);
+            var submitButton = FindViewById<Button>(Resource.Id.submitButton);
+            var txtRate = FindViewById<TextView>(Resource.Id.txtPoint);
+
+            submitButton.Click += (sender, e) => 
+            {
+                string ratingValue = ratingBar.Rating.ToString();
+                txtRate.Text = "Rate: " + ratingValue;
+            };
+
         }
     }
 }

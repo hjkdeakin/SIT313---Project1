@@ -5,26 +5,35 @@
     android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px">
-    <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="200dp"
+    <TextView
+        android:id="@+id/PointText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:text="Make a Point !" />
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rating="0"
+        android:numStars="5"
+        android:layout_marginTop="70dp"
+        android:foregroundGravity="center" />
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="submit"
+        android:layout_marginTop="170dp"
         android:layout_centerHorizontal="true" />
     <TextView
         android:text="evaluate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1"
-        android:layout_marginTop="300dp"
+        android:id="@+id/txtPoint"
+        android:layout_marginTop="240dp"
         android:layout_centerInParent="false"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="false" />
-    <RatingBar
-        android:id="@+id/ratingBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="130dp"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@id/ratingBar" />
 </RelativeLayout>

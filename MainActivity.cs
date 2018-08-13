@@ -6,11 +6,11 @@ using Android.Content;
 
 namespace AndroidCalendar
 {
-    [Activity(Label = "AndroidCalendar", MainLauncher = true, Icon = "@mipmap/icon")]
+    [Activity(Label = "AndroidCalendar", MainLauncher = true, Icon = "@mipmap/icon", ConfigurationChanges = Android.Content.PM.ConfigChanges.ScreenSize | Android.Content.PM.ConfigChanges.Orientation)]
     public class MainActivity : Activity
     {
 
-        MediaPlayer player;
+        //MediaPlayer player;
         //Button evalButton;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -41,11 +41,26 @@ namespace AndroidCalendar
             calendarView.DateChange += (s, e) =>
             {
                 int day = e.DayOfMonth;
-                int month = e.Month;
+                int month = e.Month + 1;
                 int year = e.Year;
                 txtDisplay.Text = "Date: " + day + "/" + month + "/" + year;
             };
 
+            //link to deakin date web
+            Button webButton = FindViewById<Button>(Resource.Id.webButton);
+            webButton.Click += (object sender, System.EventArgs e) => 
+            {
+                Intent webIntent = new Intent(Intent.ActionView, Android.Net.Uri.Parse("http://www.deakin.edu.au/students/enrolment-fees-and-money/university-handbook/2018-handbook/2018-trimester-dates"));
+                this.StartActivity(webIntent);
+            };
+            /*
+            webButton.Click += async (object sender, System.EventArgs e) => 
+            {
+                Intent webIntent = new Intent(Intent.ActionView, Android.Net.Uri.Parse("http://www.deakin.edu.au/students/enrolment-fees-and-money/university-handbook/2018-handbook/2018-trimester-dates"));
+                this.StartActivity(webIntent);
+            };*/
+
+            /*
             player = MediaPlayer.Create(this, Resource.Raw.adele_hello);
 
             Button button = FindViewById<Button>(Resource.Id.playButton);
@@ -67,6 +82,7 @@ namespace AndroidCalendar
             };
 
             player.Release();
+            */
 
         }
     }
